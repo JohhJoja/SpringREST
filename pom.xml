@@ -22,6 +22,12 @@
     <!-- Spring Framework (всё на 6) -->
     <dependency>
       <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>6.2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>6.2.5</version>
     </dependency>
@@ -33,16 +39,10 @@
       <version>3.1.2.RELEASE</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.thymeleaf</groupId>
-      <artifactId>thymeleaf-spring5</artifactId>
-      <version>3.1.2.RELEASE</version> <!-- Проверь актуальную версию -->
-    </dependency>
-
-    <dependency>
-      <groupId>org.thymeleaf</groupId>
-      <artifactId>thymeleaf</artifactId>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.thymeleaf</groupId>-->
+<!--      <artifactId>thymeleaf</artifactId>-->
+<!--    </dependency>-->
 
     <!-- Servlet API (jakarta) -->
     <dependency>
