@@ -10,11 +10,13 @@ public class MySpringMVCDispatcherServletInit extends AbstractAnnotationConfigDi
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
+        System.out.printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         return new Class[] {SpringConfig.class};
     }
 
     @Override
     protected String[] getServletMappings() {
+        System.out.printf("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         return new String[] {"/"};
     }
 }
