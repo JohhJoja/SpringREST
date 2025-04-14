@@ -39,12 +39,6 @@
       <version>3.1.2.RELEASE</version>
     </dependency>
 
-<!--    <dependency>-->
-<!--      <groupId>org.thymeleaf</groupId>-->
-<!--      <artifactId>thymeleaf</artifactId>-->
-<!--    </dependency>-->
-
-    <!-- Servlet API (jakarta) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
