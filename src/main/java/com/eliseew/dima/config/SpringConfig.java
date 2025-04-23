@@ -1,11 +1,6 @@
 package com.eliseew.dima.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,9 +17,6 @@ import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
 
-    public static Integer a_;
-    public static Integer b_;
-
     private final ApplicationContext applicationContext;
 
     @Autowired
@@ -37,7 +29,6 @@ public class SpringConfig implements WebMvcConfigurer {
         templateResolver.setApplicationContext(applicationContext);
         templateResolver.setPrefix("/WEB-INF/views/");
         templateResolver.setSuffix(".html");
-        System.out.printf("CCCCCCCCCCCCCCCCCCCCCCCCCc");
         return templateResolver;
     }
     @Bean
@@ -45,7 +36,6 @@ public class SpringConfig implements WebMvcConfigurer {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
-        System.out.printf("DDDDDDDDDDDDDDDDDDDDDDDDDDD");
         return templateEngine;
     }
 
@@ -55,6 +45,5 @@ public class SpringConfig implements WebMvcConfigurer {
         resolver.setTemplateEngine(templateEngine());
         resolver.setCharacterEncoding("UTF-8");
         registry.viewResolver(resolver);
-        System.out.printf("EEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
     }
 }
