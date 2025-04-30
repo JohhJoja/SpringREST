@@ -11,7 +11,7 @@ public class People {
         this.name = name;
     }
 
-    public int getId(int i) {
+    public int getId() {
         return id;
     }
 

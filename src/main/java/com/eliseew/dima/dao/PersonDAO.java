@@ -27,7 +27,7 @@ public class PersonDAO {
     }
 
     public void save(People people) {
-        people.getId(++PEOPLE_COUNT);
+        people.setId(++PEOPLE_COUNT);
         this.people.add(people);
     }
 }
