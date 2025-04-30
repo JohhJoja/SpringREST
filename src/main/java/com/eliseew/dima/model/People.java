@@ -4,12 +4,14 @@ public class People {
     private int id;
     private String name;
 
+    public People() {}
+
     public People(String name, int id) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public int getId(int i) {
         return id;
     }
 

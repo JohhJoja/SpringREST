@@ -25,4 +25,9 @@ public class PersonDAO {
     public People show(int id){
         return people.get(id);
     }
+
+    public void save(People people) {
+        people.getId(++PEOPLE_COUNT);
+        this.people.add(people);
+    }
 }

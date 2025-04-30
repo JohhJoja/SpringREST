@@ -1,12 +1,11 @@
 package com.eliseew.dima.controllers;
 
 import com.eliseew.dima.dao.PersonDAO;
+import com.eliseew.dima.model.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/people")
@@ -30,5 +29,15 @@ public class PeopleController {
         // Получим одного чела по айди из ДАО и передадим на отображение в представление
         model.addAttribute("person", personDAO.show(id));
         return "people/show";
+    }
+    @GetMapping("/new")
+    public String newPerson(Model model){
+        model.addAttribute("person", new People());
+        return "people/new";
+    }
+    @PostMapping()
+    public String create(@ModelAttribute("person") People people){
+        personDAO.save(people);
+        return "redirect:/people";
     }
 }
